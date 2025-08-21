@@ -1,0 +1,82 @@
+html{
+    background-color: #09080A;
+    font-family: 'Courier New', Courier, monospace
+}
+
+.center {
+  text-align: center;
+}
+.links {
+    text-align: center;
+    a:link { color: #F8F8F8; }
+    a:hover { color: grey; text-decoration: underline; }
+    a:visited { color: #F8F8F8; }
+    a:visited:hover { color: grey; text-decoration: underline; }
+    a:active { color: #F8F8F8; }
+}
+h1{
+    color: #F8F8F8;
+}
+h2{
+    color: #F8F8F8;
+    padding: 25px;
+}
+h3{
+    color: #F8F8F8;
+    padding: 25px;
+}
+p{
+    color: #F8F8F8; 
+
+}
+.textbox {
+    width: 500px;
+    height: 290px;
+    padding: 10px;
+    border: 2px solid #F8F8F8;
+    display: inline-block;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
+.sidenav {
+  border-right: thin solid #f8f8f8;
+  margin-left: 0px;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 180px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #09080A; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+
+}
+.sidenav a {
+  padding: 13px 8px 6px 16px;
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: none;
+  color: #F8F8F8;
+  display: block;
+  
+}
+h2.b {
+  font-family: 'Courier New', Courier, monospace;
+  color: #F8F8F8;
+  margin-left: 200px;
+  padding-bottom: 10px;
+}
+p.b {
+  font-family: 'Courier New', Courier, monospace;
+  color: #F8F8F8;
+  margin-left: 250px;
+  padding-top: 0px;
+  padding-right: 150px;
+  text-indent: 30px;
+}
