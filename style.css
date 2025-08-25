@@ -46,63 +46,28 @@ p{
 
 .sidenav {
   border-right: thin solid #f8f8f8;
-  height: 100%;
-  width: 180px;
-  position: fixed;
-  top: 0;
+  margin-left: 0px;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 180px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
   left: 0;
-  background-color: #09080A;
-  overflow-x: hidden;
+  background-color: #09080A; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
-  transition: 0.3s;
+
 }
 .sidenav a {
-  padding: 12px 16px;
+  padding: 13px 8px 6px 16px;
+  font-family: 'Courier New', Courier, monospace;
   text-decoration: none;
   color: #F8F8F8;
   display: block;
+  
 }
-.sidenav a:hover {
-  color: grey;
-}
-
-/* Page content beside sidebar */
-.main {
-  margin-left: 200px;
-  padding: 20px;
-  color: #F8F8F8;
-}
-
-/* Hamburger button (hidden by default) */
-.menu-btn {
-  display: none;
-  font-size: 26px;
-  background: none;
-  border: none;
-  color: #F8F8F8;
-  padding: 15px;
-  cursor: pointer;
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 2;
-}
-
-/* Mobile adjustments */
-@media screen and (max-width: 768px) {
-  .sidenav {
-    width: 0;
-    height: 100%;
-    border-right: none;
-    overflow-x: hidden;
-  }
-  .main {
-    margin-left: 0;
-    padding: 20px;
-  }
-  .menu-btn {
-    display: block;
-  }
+.sidenav a:hover{
+   color: grey; text-decoration: underline;
 }
 h2.b {
   font-family: 'Courier New', Courier, monospace;
@@ -146,4 +111,11 @@ li.b{
   margin-left: 250px;
   padding-bottom: 10px;
 
+}
+@media only screen and (max-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 6;}
+  .item3 {grid-area: 3 / span 6;}
+  .item4 {grid-area: 4 / span 6;}
+  .item5 {grid-area: 5 / span 6;}
 }
