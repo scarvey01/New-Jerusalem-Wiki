@@ -1,62 +1,49 @@
-
-
-html {
-  background-color: #09080A;
-  font-family: 'Courier New', Courier, monospace;
-  margin: 0;
-  padding: 0;
+html{
+    background-color: #09080A;
+    font-family: 'Courier New', Courier, monospace
 }
 
-/* Centering */
 .center {
   text-align: center;
 }
-
-/* Links */
 .links {
-  text-align: center;
+    text-align: center;
+    a:link { color: #F8F8F8; }
+    a:hover { color: grey; text-decoration: underline; }
+    a:visited { color: #F8F8F8; }
+    a:visited:hover { color: grey; text-decoration: underline; }
+    a:active { color: #F8F8F8; }
 }
-.links a {
-  color: #F8F8F8;
-  text-decoration: none;
+h1{
+    color: #F8F8F8;
 }
-.links a:hover {
-  color: grey;
-  text-decoration: underline;
+h2{
+    color: #F8F8F8;
+    padding: 25px;
 }
+h3{
+    color: #F8F8F8;
+    padding: 25px;
+}
+p{
+    color: #F8F8F8; 
 
-/* Headings */
-h1, h2, h3 {
-  color: #F8F8F8;
-  padding: 15px;
 }
-
-/* Paragraphs */
-p {
-  color: #F8F8F8;
-}
-
-/* Textbox */
 .textbox {
-  width: 90%;
-  max-width: 500px;
-  height: auto;
-  min-height: 150px;
-  padding: 10px;
-  border: 2px solid #F8F8F8;
-  display: inline-block;
-  box-sizing: border-box;
+    width: 500px;
+    height: 290px;
+    padding: 10px;
+    border: 2px solid #F8F8F8;
+    display: inline-block;
 }
 
-/* Bottom left label */
 .bottomleft {
   position: absolute;
   bottom: 8px;
   left: 16px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
-/* Sidebar Navigation */
 .sidenav {
   border-right: thin solid #f8f8f8;
   height: 100%;
@@ -67,6 +54,7 @@ p {
   background-color: #09080A;
   overflow-x: hidden;
   padding-top: 20px;
+  transition: 0.3s;
 }
 .sidenav a {
   padding: 12px 16px;
@@ -74,52 +62,88 @@ p {
   color: #F8F8F8;
   display: block;
 }
+.sidenav a:hover {
+  color: grey;
+}
 
-/* Body content beside sidenav */
-h2.b, p.b, p.c, p.d, img.b, li.b {
+/* Page content beside sidebar */
+.main {
   margin-left: 200px;
-  margin-right: 20px;
+  padding: 20px;
   color: #F8F8F8;
 }
 
-/* --- Mobile adjustments --- */
-@media screen and (max-width: 768px) {
-  .sidenav {
-    width: 100%;
-    height: auto;
-    position: relative;
-    border-right: none;
-    border-bottom: thin solid #f8f8f8;
-  }
-  .sidenav a {
-    display: inline-block;
-    padding: 10px;
-  }
-
-  h2.b, p.b, p.c, p.d, img.b, li.b {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .textbox {
-    width: 95%;
-    max-width: 100%;
-  }
+/* Hamburger button (hidden by default) */
+.menu-btn {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: #F8F8F8;
+  padding: 15px;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
 }
 
-Key changes:
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  .sidenav {
+    width: 0;
+    height: 100%;
+    border-right: none;
+    overflow-x: hidden;
+  }
+  .main {
+    margin-left: 0;
+    padding: 20px;
+  }
+  .menu-btn {
+    display: block;
+  }
+}
+h2.b {
+  font-family: 'Courier New', Courier, monospace;
+  color: #F8F8F8;
+  margin-left: 200px;
+  padding-bottom: 10px;
+}
+p.b {
+  font-family: 'Courier New', Courier, monospace;
+  color: #F8F8F8;
+  margin-left: 250px;
+  padding-top: 0px;
+  padding-right: 150px;
+  text-indent: 30px;
+}
+p.c{
+  font-weight: 900;
+  font-family: 'Courier New', Courier, monospace;
+  color: #F8F8F8;
+  margin-left: 200px;
+  padding-top: 0px;
+  padding-right: 150px;
+}
+p.d{
+  font-family: 'Courier New', Courier, monospace;
+  color: #F8F8F8;
+  margin-left: 225px;
+  padding-top: 0px;
+  padding-right: 150px;
+}
 
-width: 90% and max-width: 500px for .textbox → keeps it readable on both big & small screens.
+img.b{
+  margin-left: 200px;
+  padding-top: 0px;
+  padding-right: 150px;
+  text-indent: 30px;
+}
+li.b{
+  font-family: 'Courier New', Courier, monospace;
+  color: #F8F8F8;
+  margin-left: 250px;
+  padding-bottom: 10px;
 
-Added media query (@media screen and (max-width: 768px)):
-
-Sidebar becomes top-nav (width: 100%).
-
-Content margins collapse (margin-left: 10px).
-
-Textbox resizes to fit mobile width.
-
-
-
-👉 Do you want the sidebar to collapse into a hamburger menu on mobile, or just stack across the top?
-
+}
