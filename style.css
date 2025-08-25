@@ -1,42 +1,42 @@
-html{
-    background-color: #09080A;
-    font-family: 'Courier New', Courier, monospace
+/* ---------- Base ---------- */
+html {
+  background-color: #09080A;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.center {
-  text-align: center;
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
 }
-.links {
-    text-align: center;
-    a:link { color: #F8F8F8; }
-    a:hover { color: grey; text-decoration: underline; }
-    a:visited { color: #F8F8F8; }
-    a:visited:hover { color: grey; text-decoration: underline; }
-    a:active { color: #F8F8F8; }
-}
-h1{
-    color: #F8F8F8;
-}
-h2{
-    color: #F8F8F8;
-    padding: 25px;
-}
-h3{
-    color: #F8F8F8;
-    padding: 25px;
-}
-p{
-    color: #F8F8F8; 
 
-}
+.center { text-align: center; }
+
+.links { text-align: center; }
+.links a:link { color: #F8F8F8; }
+.links a:hover { color: grey; text-decoration: underline; }
+.links a:visited { color: #F8F8F8; }
+.links a:visited:hover { color: grey; text-decoration: underline; }
+.links a:active { color: #F8F8F8; }
+
+h1, h2, h3, p { color: #F8F8F8; }
+h2, h3 { padding: 25px; }
+
+/* Make all images responsive by default */
+img { max-width: 100%; height: auto; display: inline-block; }
+
+/* ---------- Textbox (responsive) ---------- */
 .textbox {
-    width: 500px;
-    height: 290px;
-    padding: 10px;
-    border: 2px solid #F8F8F8;
-    display: inline-block;
+  width: 90%;
+  max-width: 500px;
+  min-height: 200px;
+  padding: 10px;
+  border: 2px solid #F8F8F8;
+  display: inline-block;
+  box-sizing: border-box;
 }
 
+/* ---------- Utility ---------- */
 .bottomleft {
   position: absolute;
   bottom: 8px;
@@ -44,78 +44,156 @@ p{
   font-size: 18px;
 }
 
+/* ---------- Sidenav (desktop default) ---------- */
 .sidenav {
   border-right: thin solid #f8f8f8;
-  margin-left: 0px;
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 180px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  margin-left: 0;
+  height: 100%;
+  width: 180px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
   left: 0;
-  background-color: #09080A; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
+  background-color: #09080A;
+  overflow-x: hidden;
   padding-top: 20px;
-
+  transition: transform 0.3s ease-in-out;
 }
+
 .sidenav a {
   padding: 13px 8px 6px 16px;
   font-family: 'Courier New', Courier, monospace;
   text-decoration: none;
   color: #F8F8F8;
   display: block;
-  
 }
-.sidenav a:hover{
-   color: grey; text-decoration: underline;
-}
+
+.sidenav a:hover { color: grey; text-decoration: underline; }
+
+/* Hamburger button (hidden on desktop) */
+.menu-toggle { display: none; }
+
+/* ---------- Desktop-positioned content classes ---------- */
 h2.b {
   font-family: 'Courier New', Courier, monospace;
-  color: #F8F8F8;
   margin-left: 200px;
   padding-bottom: 10px;
 }
 p.b {
   font-family: 'Courier New', Courier, monospace;
-  color: #F8F8F8;
   margin-left: 250px;
-  padding-top: 0px;
+  padding-top: 0;
   padding-right: 150px;
   text-indent: 30px;
 }
-p.c{
+p.c {
   font-weight: 900;
   font-family: 'Courier New', Courier, monospace;
-  color: #F8F8F8;
   margin-left: 200px;
-  padding-top: 0px;
+  padding-top: 0;
   padding-right: 150px;
 }
-p.d{
+p.d {
   font-family: 'Courier New', Courier, monospace;
-  color: #F8F8F8;
   margin-left: 225px;
-  padding-top: 0px;
+  padding-top: 0;
   padding-right: 150px;
 }
-
-img.b{
+img.b {
   margin-left: 200px;
-  padding-top: 0px;
+  padding-top: 0;
   padding-right: 150px;
   text-indent: 30px;
 }
-li.b{
+li.b {
   font-family: 'Courier New', Courier, monospace;
-  color: #F8F8F8;
   margin-left: 250px;
   padding-bottom: 10px;
-
 }
+
+/* ---------- Grid responsive (unchanged) ---------- */
 @media only screen and (max-width: 600px) {
   .item1 {grid-area: 1 / span 6;}
   .item2 {grid-area: 2 / span 6;}
   .item3 {grid-area: 3 / span 6;}
   .item4 {grid-area: 4 / span 6;}
   .item5 {grid-area: 5 / span 6;}
+}
+@media only screen and (min-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 2 / span 4;}
+  .item4 {grid-area: 3 / span 6;}
+  .item5 {grid-area: 4 / span 6;}
+}
+@media only screen and (min-width: 768px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 2 / span 4;}
+  .item4 {grid-area: 2 / span 1;}
+  .item5 {grid-area: 3 / span 6;}
+}
+
+/* ---------- Text scaling ---------- */
+@media only screen and (max-width: 768px) {
+  h1 { font-size: 1.8rem; }
+  h2, h3 { font-size: 1.4rem; }
+  p, li { font-size: 0.95rem; }
+}
+
+@media only screen and (max-width: 480px) {
+  h1 { font-size: 1.5rem; }
+  h2, h3 { font-size: 1.2rem; }
+  p, li { font-size: 0.9rem; }
+}
+
+/* ---------- Mobile overrides (fills the screen) ---------- */
+@media only screen and (max-width: 768px) {
+  /* Slide-out sidenav */
+  .sidenav {
+    width: 180px;
+    transform: translateX(-100%);
+    padding-top: 60px; /* push links below the hamburger */
+  }
+  .sidenav.open { transform: translateX(0); }
+
+  .sidenav a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: block;
+    font-size: 28px;
+    color: #f8f8f8;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    padding: 0;
+    line-height: 1;
+  }
+
+  /* Let all content actually use the screen width */
+  h2.b, p.b, p.c, p.d, img.b, li.b, .textbox {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-right: 0;
+    text-indent: 0;
+    max-width: 100%;
+  }
+
+  /* Top hero image inside .center should also fit neatly */
+  .center img { max-width: calc(100% - 20px); margin: 0 10px; }
+
+  /* Textbox: full-width & auto height on mobile */
+  .textbox {
+    width: calc(100% - 20px);
+    min-height: 0;
+    height: auto;
+  }
 }

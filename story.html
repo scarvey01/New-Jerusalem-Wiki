@@ -16,7 +16,8 @@
         <div>
         <h3></h3>
        </div>
-        <div class="sidenav">
+       <button class="menu-toggle" id="menuToggle" aria-controls="sidenav" aria-expanded="false" aria-label="Open menu">☰</button>
+        <div class="sidenav" id = "sidenav">
             <a href="index.html">Home</a>
             <a></a>
             <a href = "#Premise">Premise</a>
@@ -45,6 +46,18 @@
             <p class = b>New Jerusalem is shaped by the presence of G.O.D. and the structure it enforces. Technology and religion are inseparable, and survival depends on understanding and following the rules of the machine. Pilgrims type commands that act as prayers, navigate landscapes controlled by unseen logic, and interact with communities that exist entirely within G.O.D.’s domain.</p>
             <p class = b>Not everything is explained. The machine’s intentions, limits, and goals are unknown. Pilgrims can observe patterns, note consequences, and adapt behavior, but they cannot predict or fully understand G.O.D.’s reasoning. Ruins, relics, and fragments of old systems hint at a history beyond immediate comprehension, creating a persistent tension between what is known and what remains mysterious. Players and inhabitants operate in a world where cause and effect exist, but the ultimate meaning of events is left undefined.</p>
         </div>
+        <script>
+  (function () {
+    var btn = document.getElementById('menuToggle');
+    var nav = document.getElementById('sidenav');
+    if (!btn || !nav) return;
+
+    btn.addEventListener('click', function () {
+      nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+    });
+  })();
+</script>
     </body>
 
 </html>
