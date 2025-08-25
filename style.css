@@ -1,111 +1,125 @@
-html{
-    background-color: #09080A;
-    font-family: 'Courier New', Courier, monospace
+
+
+html {
+  background-color: #09080A;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
 }
 
+/* Centering */
 .center {
   text-align: center;
 }
+
+/* Links */
 .links {
-    text-align: center;
-    a:link { color: #F8F8F8; }
-    a:hover { color: grey; text-decoration: underline; }
-    a:visited { color: #F8F8F8; }
-    a:visited:hover { color: grey; text-decoration: underline; }
-    a:active { color: #F8F8F8; }
+  text-align: center;
 }
-h1{
-    color: #F8F8F8;
+.links a {
+  color: #F8F8F8;
+  text-decoration: none;
 }
-h2{
-    color: #F8F8F8;
-    padding: 25px;
+.links a:hover {
+  color: grey;
+  text-decoration: underline;
 }
-h3{
-    color: #F8F8F8;
-    padding: 25px;
-}
-p{
-    color: #F8F8F8; 
 
+/* Headings */
+h1, h2, h3 {
+  color: #F8F8F8;
+  padding: 15px;
 }
+
+/* Paragraphs */
+p {
+  color: #F8F8F8;
+}
+
+/* Textbox */
 .textbox {
-    width: 500px;
-    height: 290px;
-    padding: 10px;
-    border: 2px solid #F8F8F8;
-    display: inline-block;
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  min-height: 150px;
+  padding: 10px;
+  border: 2px solid #F8F8F8;
+  display: inline-block;
+  box-sizing: border-box;
 }
 
+/* Bottom left label */
 .bottomleft {
   position: absolute;
   bottom: 8px;
   left: 16px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
+/* Sidebar Navigation */
 .sidenav {
   border-right: thin solid #f8f8f8;
-  margin-left: 0px;
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 180px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  height: 100%;
+  width: 180px;
+  position: fixed;
+  top: 0;
   left: 0;
-  background-color: #09080A; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
+  background-color: #09080A;
+  overflow-x: hidden;
   padding-top: 20px;
-
 }
 .sidenav a {
-  padding: 13px 8px 6px 16px;
-  font-family: 'Courier New', Courier, monospace;
+  padding: 12px 16px;
   text-decoration: none;
   color: #F8F8F8;
   display: block;
-  
-}
-h2.b {
-  font-family: 'Courier New', Courier, monospace;
-  color: #F8F8F8;
-  margin-left: 200px;
-  padding-bottom: 10px;
-}
-p.b {
-  font-family: 'Courier New', Courier, monospace;
-  color: #F8F8F8;
-  margin-left: 250px;
-  padding-top: 0px;
-  padding-right: 150px;
-  text-indent: 30px;
-}
-p.c{
-  font-weight: 900;
-  font-family: 'Courier New', Courier, monospace;
-  color: #F8F8F8;
-  margin-left: 200px;
-  padding-top: 0px;
-  padding-right: 150px;
-}
-p.d{
-  font-family: 'Courier New', Courier, monospace;
-  color: #F8F8F8;
-  margin-left: 225px;
-  padding-top: 0px;
-  padding-right: 150px;
 }
 
-img.b{
+/* Body content beside sidenav */
+h2.b, p.b, p.c, p.d, img.b, li.b {
   margin-left: 200px;
-  padding-top: 0px;
-  padding-right: 150px;
-  text-indent: 30px;
-}
-li.b{
-  font-family: 'Courier New', Courier, monospace;
+  margin-right: 20px;
   color: #F8F8F8;
-  margin-left: 250px;
-  padding-bottom: 10px;
-
 }
+
+/* --- Mobile adjustments --- */
+@media screen and (max-width: 768px) {
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: thin solid #f8f8f8;
+  }
+  .sidenav a {
+    display: inline-block;
+    padding: 10px;
+  }
+
+  h2.b, p.b, p.c, p.d, img.b, li.b {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .textbox {
+    width: 95%;
+    max-width: 100%;
+  }
+}
+
+Key changes:
+
+width: 90% and max-width: 500px for .textbox → keeps it readable on both big & small screens.
+
+Added media query (@media screen and (max-width: 768px)):
+
+Sidebar becomes top-nav (width: 100%).
+
+Content margins collapse (margin-left: 10px).
+
+Textbox resizes to fit mobile width.
+
+
+
+👉 Do you want the sidebar to collapse into a hamburger menu on mobile, or just stack across the top?
+
