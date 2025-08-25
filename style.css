@@ -80,3 +80,32 @@ p.b {
   padding-right: 150px;
   text-indent: 30px;
 }
+p.c{
+  font-weight: 900;
+  font-family: 'Courier New', Courier, monospace;
+  color: #F8F8F8;
+  margin-left: 200px;
+  padding-top: 0px;
+  padding-right: 150px;
+}
+p.d{
+  font-family: 'Courier New', Courier, monospace;
+  color: #F8F8F8;
+  margin-left: 225px;
+  padding-top: 0px;
+  padding-right: 150px;
+}
+
+img.b{
+  margin-left: 200px;
+  padding-top: 0px;
+  padding-right: 150px;
+  text-indent: 30px;
+}
+li.b{
+  font-family: 'Courier New', Courier, monospace;
+  color: #F8F8F8;
+  margin-left: 250px;
+  padding-bottom: 10px;
+
+}
