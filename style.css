@@ -109,6 +109,45 @@ li.b {
   font-family: 'Courier New', Courier, monospace;
   margin-left: 250px;
   padding-bottom: 10px;
+  color: #F8F8F8;
+
+}
+
+/* ---------- Table Base ---------- */
+table, th, td {
+  font-family: 'Courier New', Courier, monospace;
+  color: #F8F8F8;
+  border: 1px solid #f8f8f8;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 700px; /* desktop max width */
+  margin: 0 auto;   /* center table on desktop */
+  padding: 8px;
+  text-align: left;
+}
+
+/* ---------- Responsive Table Wrapper ---------- */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto; /* allows horizontal scroll on small screens */
+  padding-left: 0;  /* remove left indent */
+  padding-right: 0;
+  margin-bottom: 10px; /* space below table */
+}
+
+/* ---------- Mobile Adjustments ---------- */
+@media only screen and (max-width: 768px) {
+  table, th, td {
+    font-size: 0.85rem;
+    width: 100%;   /* fill mobile width */
+    max-width: 100%;
+  }
+
+  .table-wrapper {
+    margin-left: 0; 
+    margin-right: 0;
+    padding: 0 10px;
+  }
 }
 
 /* ---------- Grid responsive (unchanged) ---------- */
