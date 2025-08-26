@@ -9,3 +9,114 @@
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="images/icon.png">
     </head>
+    <body>
+    <div class="center">
+      <img src="images/Classes.png">
+   </div> 
+   <div>
+      <h3></h3>
+   </div>
+
+   <button class="menu-toggle" id="menuToggle" aria-controls="sidenav" aria-expanded="false" aria-label="Open menu">☰</button>
+
+   <!-- Side Navigation -->
+   <div class="sidenav" id="sidenav">
+      <a href="index.html">Home</a>
+      <a></a>
+      <a href="#Attributes">Attributes</a>
+      <a href="#Abyssal">Abyssal</a>
+      <a href="#Cleric">Cleric</a>
+      <a href="#Brute">Brute</a>
+      <a href="#wraith">Wraith</a>
+      <a href="#Setinel">Setinel</a>
+
+      <a href="#Merchant">Merchant Bias</a>
+
+
+   </div>
+    <div id = Attributes>
+            <h2 class = b>Attributes</h2>
+            <p class = b>
+            <li class = b><strong>Health:</strong> Determines how much damage the player can take before death.</li>
+            <li class = b><strong>Strength:</strong> Influences melee damage and physical interactions with the environment.</li>
+            <li class = b><strong>Agility:</strong> Affects movement speed, dodge chance, and turn order in combat.</li>
+            <li class = b><strong>Willpower:</strong> Determines resistance to corruption and the effectiveness of faith-based actions.</li>
+            <li class = b><strong>Affinity:</strong> Measures the player’s ability to manipulate corruption for offensive or environmental effects.</li>
+            </p>
+        </div>
+    <div id = Abyssal>
+        <h2 class="b">Abyssal (Corruption Based Build)</h2>
+        <p class =b>Masters of dark power, Abyssals manipulate corruption to weaken foes and enhance their own abilities. They thrive on risk, often sacrificing their own well-being to unleash devastating effects. Their presence in the world can provoke merchants or NPCs who are hostile to corruption, making strategic interactions important.</p>
+    </div>
+    <div id = Cleric>
+        <h2 class = b>Cleric (Faith Based Build)</h2>
+        <p class =b>
+            Clerics wield the power of faith to heal allies, bless weapons, and smite enemies with holy energy. They are defensive and supportive, relying on their connection to the sacred to turn the tide of battle. Clerics are favored by merchants aligned with faith but may face resistance from those who despise their holy power.
+        </p>
+    </div>
+    <div id = brute>
+        <h2 class = b>Brute (Strength Based Build)</h2>
+        <p class = b>
+            Brutes are frontline powerhouses who rely on raw strength to smash enemies and break through obstacles. Their heavy attacks and durability make them natural tanks in combat, though they often lack finesse or magical abilities.
+        </p>
+    </div>
+    <div id = wraith>
+        <h2 class="b">Wraith (Agility Based Build)</h2>
+        <p class =b>Wraiths are nimble and precise, excelling in speed, dodging, and hit-and-run tactics. They strike quickly and retreat before enemies can retaliate, using mobility and critical hits to overcome foes.</p>
+    </div>
+    <div id = Setinel>
+        <h2 class = b>
+            Setinel(Balanced)
+        </h2>
+        <p class = b>Sentinels are versatile warriors, evenly balanced across all five stats. They can adapt to a wide variety of situations, providing steady damage, defense, or support depending on the challenge at hand. This flexibility makes them ideal for players who prefer a balanced approach.</p>
+    </div>
+    <div class="table-wrapper" id = Merchant>
+    <h2 class =b>Merchant Bias Chart</h2>
+  <table>
+    <tr>
+      <th>Class</th>
+      <th>Bias vs Faith Merchants</th>
+      <th>Bias vs Corruption Merchants</th>
+    </tr>
+    <tr>
+      <td>Abyssal</td>
+      <td>0%</td>
+      <td>+15%</td>
+    </tr>
+    <tr>
+      <td>Cleric</td>
+      <td>+15%</td>
+      <td>0%</td>
+    </tr>
+    <tr>
+      <td>Brute</td>
+      <td>+10%</td>
+      <td>0%</td>
+    </tr>
+    <tr>
+      <td>Wraith</td>
+      <td>0%</td>
+      <td>+10%</td>
+    </tr>
+    <tr>
+      <td>Sentinel</td>
+      <td>0%</td>
+      <td>0%</td>
+    </tr>
+  </table>
+</div>
+</div>
+<script>
+  (function () {
+    var btn = document.getElementById('menuToggle');
+    var nav = document.getElementById('sidenav');
+    if (!btn || !nav) return;
+
+    btn.addEventListener('click', function () {
+      nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+    });
+  })();
+</script>
+</body>
+</html>

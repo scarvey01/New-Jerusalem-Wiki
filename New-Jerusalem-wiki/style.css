@@ -1,33 +1,42 @@
-html{
-    background-color: #09080A;
-    font-family: 'Courier New', Courier, monospace;
+/* ---------- Base ---------- */
+html {
+  background-color: #09080A;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.center {
-  text-align: center;
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
-.links {
-    text-align: center;
-}
+.center { text-align: center; }
+
+.links { text-align: center; }
 .links a:link { color: #F8F8F8; }
 .links a:hover { color: grey; text-decoration: underline; }
 .links a:visited { color: #F8F8F8; }
 .links a:visited:hover { color: grey; text-decoration: underline; }
 .links a:active { color: #F8F8F8; }
 
-h1, h2, h3, p{
-    color: #F8F8F8;
-}
+h1, h2, h3, p { color: #F8F8F8; }
+h2, h3 { padding: 25px; }
 
+/* Make all images responsive by default */
+img { max-width: 100%; height: auto; display: inline-block; }
+
+/* ---------- Textbox (responsive) ---------- */
 .textbox {
-    width: 500px;
-    height: 290px;
-    padding: 10px;
-    border: 2px solid #F8F8F8;
-    display: inline-block;
+  width: 90%;
+  max-width: 500px;
+  min-height: 200px;
+  padding: 10px;
+  border: 2px solid #F8F8F8;
+  display: inline-block;
+  box-sizing: border-box;
 }
 
+/* ---------- Utility ---------- */
 .bottomleft {
   position: absolute;
   bottom: 8px;
@@ -35,10 +44,10 @@ h1, h2, h3, p{
   font-size: 18px;
 }
 
-/* SIDENAV (Desktop Default) */
+/* ---------- Sidenav (desktop default) ---------- */
 .sidenav {
   border-right: thin solid #f8f8f8;
-  margin-left: 0px;
+  margin-left: 0;
   height: 100%;
   width: 180px;
   position: fixed;
@@ -50,6 +59,7 @@ h1, h2, h3, p{
   padding-top: 20px;
   transition: transform 0.3s ease-in-out;
 }
+
 .sidenav a {
   padding: 13px 8px 6px 16px;
   font-family: 'Courier New', Courier, monospace;
@@ -57,33 +67,141 @@ h1, h2, h3, p{
   color: #F8F8F8;
   display: block;
 }
-.sidenav a:hover{
-   color: grey; 
-   text-decoration: underline;
-}
+
+.sidenav a:hover { color: grey; text-decoration: underline; }
 
 /* Hamburger button (hidden on desktop) */
-.menu-toggle {
-  display: none;
+.menu-toggle { display: none; }
+
+/* ---------- Desktop-positioned content classes ---------- */
+h2.b {
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 200px;
+  padding-bottom: 10px;
 }
-.menu-toggle-checkbox {
-  display: none;
+p.b {
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 250px;
+  padding-top: 0;
+  padding-right: 150px;
+  text-indent: 30px;
+}
+p.c {
+  font-weight: 900;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 200px;
+  padding-top: 0;
+  padding-right: 150px;
+}
+p.d {
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 225px;
+  padding-top: 0;
+  padding-right: 150px;
+}
+img.b {
+  margin-left: 200px;
+  padding-top: 0;
+  padding-right: 150px;
+  text-indent: 30px;
+}
+li.b {
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 250px;
+  padding-bottom: 10px;
+  color: #F8F8F8;
+
 }
 
-/* MOBILE STYLES */
+/* ---------- Table Base ---------- */
+table, th, td {
+  font-family: 'Courier New', Courier, monospace;
+  color: #F8F8F8;
+  border: 1px solid #f8f8f8;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 700px; /* desktop max width */
+  margin: 0 auto;   /* center table on desktop */
+  padding: 8px;
+  text-align: left;
+}
+
+/* ---------- Responsive Table Wrapper ---------- */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto; /* allows horizontal scroll on small screens */
+  padding-left: 0;  /* remove left indent */
+  padding-right: 0;
+  margin-bottom: 10px; /* space below table */
+}
+
+/* ---------- Mobile Adjustments ---------- */
 @media only screen and (max-width: 768px) {
+  table, th, td {
+    font-size: 0.85rem;
+    width: 100%;   /* fill mobile width */
+    max-width: 100%;
+  }
+
+  .table-wrapper {
+    margin-left: 0; 
+    margin-right: 0;
+    padding: 0 10px;
+  }
+}
+
+/* ---------- Grid responsive (unchanged) ---------- */
+@media only screen and (max-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 6;}
+  .item3 {grid-area: 3 / span 6;}
+  .item4 {grid-area: 4 / span 6;}
+  .item5 {grid-area: 5 / span 6;}
+}
+@media only screen and (min-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 2 / span 4;}
+  .item4 {grid-area: 3 / span 6;}
+  .item5 {grid-area: 4 / span 6;}
+}
+@media only screen and (min-width: 768px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 2 / span 4;}
+  .item4 {grid-area: 2 / span 1;}
+  .item5 {grid-area: 3 / span 6;}
+}
+
+/* ---------- Text scaling ---------- */
+@media only screen and (max-width: 768px) {
+  h1 { font-size: 1.8rem; }
+  h2, h3 { font-size: 1.4rem; }
+  p, li { font-size: 0.95rem; }
+}
+
+@media only screen and (max-width: 480px) {
+  h1 { font-size: 1.5rem; }
+  h2, h3 { font-size: 1.2rem; }
+  p, li { font-size: 0.9rem; }
+}
+
+/* ---------- Mobile overrides (fills the screen) ---------- */
+@media only screen and (max-width: 768px) {
+  /* Slide-out sidenav */
   .sidenav {
     width: 180px;
     transform: translateX(-100%);
-    padding-top: 60px; /* move links down */
+    padding-top: 60px; /* push links below the hamburger */
   }
-  .sidenav.open {
-    transform: translateX(0);
-  }
+  .sidenav.open { transform: translateX(0); }
+
   .sidenav a {
     padding-top: 10px;
     padding-bottom: 10px;
   }
+
+  /* Show hamburger */
   .menu-toggle {
     display: block;
     font-size: 28px;
@@ -99,97 +217,22 @@ h1, h2, h3, p{
     line-height: 1;
   }
 
-  /* Text content full width on mobile */
-  h2.b, p.b, p.c, p.d, li.b, img.b {
-    margin-left: 10px !important;
-    margin-right: 10px !important;
-    padding-right: 0 !important;
-    text-indent: 0 !important;
-  }
-
-  /* Make center images responsive */
-  .center img, img.b {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+  /* Let all content actually use the screen width */
+  h2.b, p.b, p.c, p.d, img.b, li.b, .textbox {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-right: 0;
+    text-indent: 0;
     max-width: 100%;
-    height: auto;
-    display: block;
   }
-}
 
-h2.b {
-  font-family: 'Courier New', Courier, monospace;
-  color: #F8F8F8;
-  margin-left: 200px;
-  padding-bottom: 10px;
-}
-p.b {
-  font-family: 'Courier New', Courier, monospace;
-  color: #F8F8F8;
-  margin-left: 250px;
-  padding-top: 0px;
-  padding-right: 150px;
-  text-indent: 30px;
-}
-p.c{
-  font-weight: 900;
-  font-family: 'Courier New', Courier, monospace;
-  color: #F8F8F8;
-  margin-left: 200px;
-  padding-top: 0px;
-  padding-right: 150px;
-}
-p.d{
-  font-family: 'Courier New', Courier, monospace;
-  color: #F8F8F8;
-  margin-left: 225px;
-  padding-top: 0px;
-  padding-right: 150px;
-}
+  /* Top hero image inside .center should also fit neatly */
+  .center img { max-width: calc(100% - 20px); margin: 0 10px; }
 
-img{
-  max-width: 100%;
-  height: auto;
-}
-img.b{
-  margin-left: 200px;
-  padding-top: 0px;
-  padding-right: 150px;
-  text-indent: 30px;
-  max-width: 100%;
-  height: auto;
-}
-
-li.b{
-  font-family: 'Courier New', Courier, monospace;
-  color: #F8F8F8;
-  margin-left: 250px;
-  padding-bottom: 10px;
-}
-
-/* GRID LAYOUTS */
-@media only screen and (max-width: 600px) {
-  .item1 {grid-area: 1 / span 6;}
-  .item2 {grid-area: 2 / span 6;}
-  .item3 {grid-area: 3 / span 6;}
-  .item4 {grid-area: 4 / span 6;}
-  .item5 {grid-area: 5 / span 6;}
-}
-
-@media only screen and (min-width: 600px) {
-  .item1 {grid-area: 1 / span 6;}
-  .item2 {grid-area: 2 / span 1;}
-  .item3 {grid-area: 2 / span 4;}
-  .item4 {grid-area: 3 / span 6;}
-  .item5 {grid-area: 4 / span 6;}
-}
-
-@media only screen and (min-width: 768px) {
-  .item1 {grid-area: 1 / span 6;}
-  .item2 {grid-area: 2 / span 1;}
-  .item3 {grid-area: 2 / span 4;}
-  .item4 {grid-area: 2 / span 1;}
-  .item5 {grid-area: 3 / span 6;}
+  /* Textbox: full-width & auto height on mobile */
+  .textbox {
+    width: calc(100% - 20px);
+    min-height: 0;
+    height: auto;
+  }
 }
