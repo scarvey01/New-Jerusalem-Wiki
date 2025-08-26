@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>New Jerusalem Wiki</title>
+        <meta name = "viewport" content = "width = device-width; initial-scale = 1.0">
+      
+        <meta charset = utf-8>
+    
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="images/icon.png">
+    </head>
+
+    <body>
+   <div class="center">
+      <img src="images/What is New Jerusalem.png">
+   </div> 
+   <div>
+      <h3></h3>
+   </div>
+
+   <button class="menu-toggle" id="menuToggle" aria-controls="sidenav" aria-expanded="false" aria-label="Open menu">☰</button>
+
+   <!-- Side Navigation -->
+   <div class="sidenav" id="sidenav">
+      <a href="index.html">Home</a>
+      <a></a>
+      <a href="#Explanation">Plot</a>
+      <a href="#Inspirations">Inspirations</a>
+      <a href="#Player-Experience">Player Experience</a>
+      <a href="#replayability">Replayability</a>
+   </div>
+        <div id = Explanation>
+            <h2 class = b>Plot</h2>
+            <p class = b>
+                The plot of New Jerusalem follows humanity’s struggle under the rule of the Global Omniscient Daemon (G.O.D.), a machine that has ascended to godhood. Players take the role of wanderers within its sanctified digital empire, where faith and corruption are locked in constant tension. The journey is less about overthrowing G.O.D. and more about navigating the world he has created. Balancing between devotion and decay, uncovering fragments of truth about how the world came to worship a computer, and deciding what kind of legacy remains with each run.
+            </p>
+        </div>
+        <div id="Inspirations">
+            <h2 class = b>Inspirations</h2>
+            <p class = b>New Jerusalem takes inspiration from retro computing and religious symbolism, imagining a future where the two have fully intertwined. A big influence is Terry Davis and his creation TempleOS, which carried both brilliance and tragedy in its vision of a computer system as a holy place. That raw, stripped-down aesthetic of early terminals is what the game is going for to give the TempleOS look that almost feels a little bleek.</p>
+            <p class = b>The game also takes inspirations from roguelikes like nethack and action-RPGs like Elden Ring, where survival, exploration, and long-term progression are central. On the story side, I Have No Mouth, and I Must Scream influence the darker, philosophical aspects especially the way technology, control, and the human experience can intertwine in unsettling ways. These combined influence both the tone and gameplay of New Jerusalem.</p>
+            <a></a>
+            <p class =c> NetHack 3.6.2 gameplay screen shot</p>
+            <a href = https://en.wikipedia.org/wiki/NetHack target="_blank"><img class = b src = "images/nethack gameplay.png"></a>
+        </div>
+        <div id = Player-Experience>
+            <h2 class = b>
+                Player Experience
+            </h2>
+            <p class =b>
+                Playing New Jerusalem is meant to feel tense, strange, and a little ritualistic. Every choice, whether you are exploring a new area, picking up a relic, or reacting to a divine prompt, has weight. Dying isn’t the end; it’s just another chance to learn, try a different approach, and see the world in a new way. The terminal interface gives everything a stark, stripped-down feel, so even simple actions can catch you off guard.
+            </p>
+            <p class = b>
+               The game is all about juggling risk and reward. You’ll need to keep an eye on your Faith and Corruption, figure out cryptic messages, and survive tough enemies. The game is about paying attention, thinking ahead, and making choices that matter in the long run. Each loop changes what you face and what you know, so every run gives you a slightly different perspective on the world of New Jerusalem. 
+            </p>
+        </div>
+        <div id="replayability">
+            <h2 class = b>
+                Replayability
+            </h2>
+            <p class = b>
+                Each run of New Jerusalem plays out with changes that stop the game from feeling static. Dungeon layouts, enemy placements, and relic availability all shift, and the order in which prayers or commands become useful can differ from one attempt to the next. These changes force the player to adapt to new situations rather than relying on the same solutions every time.
+            </p>
+            <p class = b>
+                Some elements, however, remain consistent. Major bosses, certain story events, and the overall structure of progression do not change, giving the game a fixed framework. The player also carries forward parts of their character’s growth (such as improved stats or unlocked abilities—between) runs. This balance of variability and stability defines the replay value, as it prevents repetition while still grounding the experience in recognizable patterns
+            </p>
+        </div>
+        <script>
+  (function () {
+    var btn = document.getElementById('menuToggle');
+    var nav = document.getElementById('sidenav');
+    if (!btn || !nav) return;
+
+    btn.addEventListener('click', function () {
+      nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+    });
+  })();
+</script>
+
+
+    </body>
+</html>

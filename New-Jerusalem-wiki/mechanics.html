@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>New Jerusalem Wiki</title>
+        <meta name = "viewport" content = "width = device-width; initial-scale = 1.0">
+      
+        <meta charset = utf-8>
+    
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="images/icon.png">
+    </head>
+    <body>
+        <div class = center>
+            <img src="images/Game Mechanics.png">
+        </div>
+        <div>
+        <h3></h3>
+       </div>
+       <button class="menu-toggle" id="menuToggle" aria-controls="sidenav" aria-expanded="false" aria-label="Open menu">☰</button>
+        <div class="sidenav" id="sidenav">
+            <a href="index.html">Home</a>
+            <a></a>
+            <a href = "#Exploration">Exploration</a>
+            <a href="#Combat">Combat</a>
+            <a href="#prayer">prayers</a>
+            <a href="#stats">Stats</a>
+            <a href="#Faith">Faith</a>
+            <a href="#Corruption">Corruption</a>
+            <a href="#faith&corruption">Faith & Corruption Interaction</a>
+
+        </div>
+        <div id = Exploration>
+            <h2 class = b>Exploration</h2>
+            <p class = b>Players navigate New Jerusalem one step at a time, moving through tiles that represent cities, forests, ruins, and terminals. Movement is typically controlled using arrow keys, WASD, or a numeric keypad. Terrain affects how the player moves: open streets allow fast travel, forests and ruins may slow movement or obscure vision, and certain areas may be inaccessible without using a relic or completing a command.</p>
+            <p class =b>Exploration is central to survival. Players encounter enemies, find relics, and access terminals while moving through the world. Each area is designed to encourage observation and strategic choice, as knowing the environment can influence combat, resource use, and overall progression. Some elements of the world remain constant between loops, while others shift or respawn, keeping exploration dynamic and rewarding. </p>
+        </div>
+        <div id =Combat>
+            <h2 class = b>Combat</h2>
+            <p class = b>Combat in New Jerusalem is turn-based. Each turn, the player and any nearby enemies take one action. Actions include attacking, defending, using an item or relic, or performing a ritual command. The order of turns is determined by a combination of speed stats and environmental factors.</p>
+            <p class = b>Damage and effects are calculated based on stats, weapons, relics, and terrain. Some attacks or rituals may consume faith or trigger special effects tied to corruption levels. Enemies behave according to simple AI routines, but can interact with the environment, making positioning and timing important. Combat is designed to be predictable enough for strategy while allowing surprises, especially when facing multiple foes or unusual terrain conditions.</p>
+        </div>
+        <div id = prayer>
+            <h2 class = b>Prayers</h2>
+            <p class = b>Players can carry up to four prayers at a time. Each prayer represents a specific ability or ritual, such as healing, shielding, or summoning an effect. Instead of typing out commands, prayers are assigned to slots 1 through 4, which the player can select during exploration or combat.</p>
+            <p class = b>Using a prayer consumes faith and may interact with corruption. Choosing which prayers to carry and when to use them is part of the strategy. Some prayers can affect combat directly, while others manipulate the environment, open hidden areas, or reveal lore. Players can swap or upgrade their prayers between loops, allowing for different playstyles and adaptation to challenges.</p>
+        </div>
+        <div id = stats>
+            <h2 class =b>Stats / Character Development</h2>
+            <p class =d>Players have several stats that define their capabilities and influence interactions within New Jerusalem. Key stats include:</p>
+            <li class = b>Health: Determines how much damage the player can take before death.</li>
+            <li class = b>Strength: Influences melee damage and physical interactions with the environment.</li>
+            <li class = b>Agility: Affects movement speed, dodge chance, and turn order in combat.</li>
+            <li class = b>Willpower: Determines resistance to corruption and the effectiveness of faith-based actions.</li>
+            <li class = b>Affinity: Measures the player’s ability to manipulate corruption for offensive or environmental effects.</li>
+
+        </div>
+        <div id = Faith>
+            <h2 class = b>Faith</h2>
+            <p class = b>Faith is the player’s primary resource for performing prayers and rituals. It determines how effective prayers are and can unlock optional abilities or hidden interactions within the world. Using a prayer consumes faith, and it can be restored through rest, relics, or performing specific actions at terminals or shrines. High faith strengthens the impact of prayers, improves resistance to corruption, and may influence how the world responds to the player. Players must manage faith carefully to maintain effectiveness in combat and exploration.</p>
+        </div>
+        <div id = Corruption>
+            <h2 class = b> Corruption</h2>
+            <p class = b>Corruption is a measure of how much the player has been affected by the dangers and failures in the world. It rises through exposure to enemies, environmental hazards, failed commands, or neglecting rituals. High corruption can weaken faith-based actions, reduce stats, or trigger unexpected events within the world. Some areas or encounters increase corruption automatically over time, adding risk to exploration. Corruption can also be used strategically: certain prayers or relics may consume corruption to produce powerful effects, enabling specialized “corruption builds.”</p>
+        </div>
+        <div id = faith&corruption>
+            <h2 class = b>Faith and Corruption Interaction</h2>
+            <p class = b>TBD for now. I want to figure out a good way to balance the two and make sure the player cant just do a build that works well with both</p>
+        </div>
+        <script>
+  (function () {
+    var btn = document.getElementById('menuToggle');
+    var nav = document.getElementById('sidenav');
+    if (!btn || !nav) return;
+
+    btn.addEventListener('click', function () {
+      nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+    });
+  })();
+</script>
+
+    </body>
+</html>

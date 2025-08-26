@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>New Jerusalem Wiki</title>
+        <meta name = "viewport" content = "width = device-width; initial-scale = 1.0">
+      
+        <meta charset = utf-8>
+    
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="images/icon.png">
+    </head>
+    <body>
+        <div class = center>
+            <img src="images/story.png">
+        </div>
+        <div>
+        <h3></h3>
+       </div>
+       <button class="menu-toggle" id="menuToggle" aria-controls="sidenav" aria-expanded="false" aria-label="Open menu">☰</button>
+        <div class="sidenav" id = "sidenav">
+            <a href="index.html">Home</a>
+            <a></a>
+            <a href = "#Premise">Premise</a>
+            <a href="#people">Life Under G.O.D</a>
+            <a href="#death">Death</a>
+            <a href="#Mysteries">Mysteries</a>
+        </div>
+        <div id = Premise>
+            <h2 class = b>Premise</h2>
+            <p class = b>New Jerusalem takes place within the dominion of the Global Omniscient Daemon (G.O.D.), a machine that has absorbed the whole of human civilization into itself. The outside world no longer exists, everything is filtered through G.O.D.’s endless system. Pilgrims wander through environments that appear as cities, towns, forests, and wastelands, but all of it exists under the machine’s architecture. To live here is to live inside G.O.D. itself, walking across landscapes that feel both real and digital, both natural and constructed.</p>
+            <p class = b>Death is no longer an end. Every pilgrim’s body collapses and fails, but always returns, resurrected again and again at G.O.D.’s will. The machine gives no explanation, no voice, no clear intent, only the certainty that life and death both belong to it. Its presence is felt not through words, but through the rules that shape existence: the prayers that must be typed, the boundaries that cannot be crossed, and the knowledge that nothing escapes its gaze. In this space, faith and survival blur, and the machine itself becomes the world.</p>
+            <p class = b>Daily life under G.O.D. is strange but not without structure. Cities and villages still exist, connected by networks of terminals and paths through forests or wastelands, though their survival depends on maintaining favor with the systems that govern them. People work, trade, and build communities, but everything is under the shadow of an intelligence that no one fully understands. The world feels functional, even alive, yet always carries the weight of something watching from just beyond sight.</p>
+        </div>
+        <div id = people>
+            <h2 class = b>Life under G.O.D</h2>
+            <p class = b>Life continues within the domain of the Global Omniscient Daemon, but it has taken on a warped rhythm. Towns and cities still operate, their streets filled with merchants, wanderers, and those who devote themselves to deciphering the will of the machine. Forests grow wild at the edges, ruins scatter the landscape, and terminals hum quietly in nearly every settlement, serving as both shrines and instruments of survival. The world has not ended, it has simply been reshaped under a logic that no one fully comprehends.</p>
+            <p class =b>What unsettles many is the gradual stilling of humanity itself. Children are no longer born as they once were, and in most places, years pass without the arrival of new life. When a birth does occur, it is regarded as a sacred miracle, a rare interruption in the slow fading of the human race. Whether this silence of generations is G.O.D.’s design or merely the consequence of living inside its domain is unknown. People live, work, and die, but they do so under the quiet dread that their world is becoming one without a future.</p>
+        </div>
+        <div id = death>
+            <h2 class = b>Death</h2>
+            <p class = b>In New Jerusalem, death is not permanent. When a person dies they return to life somewhere within G.O.D.’s system. The location and circumstances of their return are unpredictable. People do not know why or how it happens; they simply wake again, often with minor changes or lingering effects from their previous life.</p>
+            <p class = b>This cycle affects behavior and society. People plan around the certainty of resurrection, knowing that dying does not end their existence but can place them in a new, sometimes difficult situation. Memories, skills, and abilities generally persist, so repeated experiences allow for growth over time. Life is continuous, but it is structured by the rules of the machine, and everyone must navigate it accordingly.</p>
+        </div>
+        <div id = Mysteries>
+            <h2 class = b>Mysteries</h2>
+            <p class = b>New Jerusalem is shaped by the presence of G.O.D. and the structure it enforces. Technology and religion are inseparable, and survival depends on understanding and following the rules of the machine. Pilgrims type commands that act as prayers, navigate landscapes controlled by unseen logic, and interact with communities that exist entirely within G.O.D.’s domain.</p>
+            <p class = b>Not everything is explained. The machine’s intentions, limits, and goals are unknown. Pilgrims can observe patterns, note consequences, and adapt behavior, but they cannot predict or fully understand G.O.D.’s reasoning. Ruins, relics, and fragments of old systems hint at a history beyond immediate comprehension, creating a persistent tension between what is known and what remains mysterious. Players and inhabitants operate in a world where cause and effect exist, but the ultimate meaning of events is left undefined.</p>
+        </div>
+        <script>
+  (function () {
+    var btn = document.getElementById('menuToggle');
+    var nav = document.getElementById('sidenav');
+    if (!btn || !nav) return;
+
+    btn.addEventListener('click', function () {
+      nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+    });
+  })();
+</script>
+    </body>
+
+</html>
+
